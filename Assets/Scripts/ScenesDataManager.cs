@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class ScenesDataManager : MonoBehaviour
     public static ScenesDataManager instance;
 
     public string playerName;
+    public int playerPoints;
 
     private void Awake()
     {
@@ -18,5 +20,4 @@ public class ScenesDataManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
 }
