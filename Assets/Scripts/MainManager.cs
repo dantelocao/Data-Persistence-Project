@@ -11,10 +11,13 @@ public class MainManager : MonoBehaviour
     public Rigidbody Ball;
 
     public Text ScoreText;
+    public MenuManager menuScipts;
+
     public GameObject GameOverText;
     
     private bool m_Started = false;
     private int m_Points;
+    private int m_PlayerName;
     
     private bool m_GameOver = false;
 
@@ -70,6 +73,8 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
+        ScenesDataManager.instance.SaveBestPlayer();
+        //menuScipts.SetBestScore();
         m_GameOver = true;
         GameOverText.SetActive(true);
     }

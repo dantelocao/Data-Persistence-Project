@@ -17,17 +17,15 @@ public class MenuManager : MonoBehaviour
 
         // Acessar o texto digitado
         string inputText = inputField.text;
-        Debug.Log("Texto digitado: " + inputText);
+        //Debug.Log("Texto digitado: " + inputText);
 
         ScenesDataManager.instance.playerName = inputText;
 
     }
 
-
     public void StartGame()
     {
         SceneManager.LoadScene(1);
-
     }
 
     public void GoBackToMenu()
